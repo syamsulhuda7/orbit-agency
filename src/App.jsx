@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform, useInView } from 'fra
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial, Float, Text, ContactShadows } from '@react-three/drei';
 import {
-  Code, globe, Layers, Rocket, Zap, ArrowRight, Menu, X, Twitter, Linkedin, Mail, ChevronRight, Play, Cpu, Globe
+  Code, Layers, Rocket, Zap, ArrowRight, Menu, X, Twitter, Linkedin, Mail, ChevronRight, Play, Cpu, Globe
 } from 'lucide-react';
 
 // --- Global Essentials ---
@@ -141,7 +141,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black pb-20">
       <div className="container mx-auto px-10 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 pt-28 md:pt-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -166,7 +166,7 @@ const Hero = () => {
               </div>
             </motion.div>
           </div>
-          <div className="lg:col-span-5 h-[500px] lg:h-[700px] relative">
+          <div className="lg:col-span-5 h-0 md:h-[500px] lg:h-[700px] relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -285,7 +285,7 @@ const FeaturedWorks = () => {
     <section id="works" className="py-32 bg-black px-10">
       <div className="container mx-auto">
         <SectionTitle subtitle="Portfolio">Selected Impact</SectionTitle>
-        <div className="space-y-32">
+        <div className="space-y-12 md:space-y-32">
           {projects.map((project, i) => (
             <div key={project.name} className="group cursor-pointer">
               <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[2rem] border border-white/10 mb-10">
@@ -419,9 +419,9 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <h2 className="text-6xl md:text-9xl font-black tracking-tighter mb-10 leading-none">
+          <h2 className="text-5xl md:text-6xl md:text-9xl font-black tracking-tighter mb-10 leading-none">
             Let's create <br />
-            <span className="text-reveal">unforgettable</span>
+            <span className="text-reveal text-5xl md:text-6xl">unforgettable</span>
           </h2>
           <button className="group relative px-12 py-6 bg-white text-black font-black uppercase text-sm tracking-[0.2em] rounded-full overflow-hidden transition-all hover:pr-16">
             <span className="relative z-10">Start the Experience</span>
